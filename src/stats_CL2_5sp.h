@@ -133,4 +133,5 @@ unsigned char Stats_Read_Samples(void);
 void SpStats_WD(uint16_t *cnt);
 void SpStats_Rho(uint16_t *cnt);
 //void SpStats_AuxB( unsigned int *j_av);  10.4.12 not used
+void Stats_Find_WDIR_Av(void);
 
