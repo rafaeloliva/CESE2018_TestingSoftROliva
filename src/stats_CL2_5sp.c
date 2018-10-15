@@ -29,7 +29,7 @@
 #include "stats_CL2_5sp.h"
 
 
-static uint8_t Flag_Print_METEO = 0; // Added for test purpose 13.10.18
+static uint8_t Flag_Print_METEO = 1; // Added for test purpose 13.10.18
 // *****************************************************************************
 // 7) Direccion de Viento
 // *****************************************************************************
@@ -45,6 +45,9 @@ uint16_t j_av;  // Temp counter, change to uint16_t
    // Convert to Rads..
    AUX.DSampleRad = K_PIOVER180 * AUX.DSampleDeg;
    // Find sin, cos of converted angle
+   if(Flag_Print_METEO){
+       printf("\n\r  DSampleDeg:, %3.5f  ", AUX.DSampleDeg);
+       }	
    AUX.Vvx = sin(AUX.DSampleRad);
    AUX.Vvy = cos(AUX.DSampleRad);
    // Average these two vector components..
@@ -58,6 +61,9 @@ uint16_t j_av;  // Temp counter, change to uint16_t
       ftemp = ftemp /(FP)( j_av);
         /* No FP integrity checking in this compiler.. */
       AUX.A_v_vy = ftemp;   // AUX.A_v_vy  contains y average..
+    if(Flag_Print_METEO){
+       printf("\n\r Cnt: %d, Avg_v_vx:, %3.5f, Avg_v_vy:, %3.5f  ",j_av, AUX.A_v_vx, AUX.A_v_vy);
+       }	
     // Could require range checking..
     // End Avg_calc ********************************************
 }

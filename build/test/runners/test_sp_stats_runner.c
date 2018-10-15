@@ -36,6 +36,8 @@ char* GlobalOrderError;
 extern void setUp(void);
 extern void tearDown(void);
 extern void test_SpStats_WD(void);
+extern void test_SpStatsIter_WDN(void);
+extern void test_SpStatsIter_WDS(void);
 
 
 /*=======Suite Setup=====*/
@@ -70,7 +72,9 @@ int main(void)
 {
   suite_setup();
   UnityBegin("test_sp_stats.c");
-  RUN_TEST(test_SpStats_WD, 15);
+  RUN_TEST(test_SpStats_WD, 28);
+  RUN_TEST(test_SpStatsIter_WDN, 38);
+  RUN_TEST(test_SpStatsIter_WDS, 52);
 
   return suite_teardown(UnityEnd());
 }
