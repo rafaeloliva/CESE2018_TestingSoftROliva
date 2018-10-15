@@ -36,7 +36,8 @@ DEFAULT_TEST_LINKER_TOOL = {
     "\"${1}\"".freeze,
     "-o \"${2}\"".freeze,
     "".freeze,
-    "${4}".freeze
+    "${4}".freeze,
+    "-lm".freeze,
     ].freeze
   }
 

@@ -3,7 +3,7 @@
 #include "unity.h"
 
 
-static uint16_t j_aver;
+
 
 
 

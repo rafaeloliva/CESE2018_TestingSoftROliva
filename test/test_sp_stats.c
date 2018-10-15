@@ -1,7 +1,7 @@
 #include "unity.h"
 #include "stats_CL2_5sp.h"
 
-static uint16_t j_aver;
+
 
 void setUp(void) {
    Stats_Call_Init();

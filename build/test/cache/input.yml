@@ -133,6 +133,7 @@
     - -o "${2}"
     - ''
     - "${4}"
+    - "-lm"
   :test_file_preprocessor:
     :executable: gcc
     :name: default_test_file_preprocessor
