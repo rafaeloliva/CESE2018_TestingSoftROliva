@@ -81,6 +81,7 @@ typedef struct sp_stats_holder {
 // *****************************************************************************
 
 // unsigned int j_aver = 0; - redefine in test 10.2018
+uint16_t j_aver;    // will be defined in _5sp.c
 #ifdef FULL_STATS_CALC
 StH Pa;        // Crea en RAM la estructura de stats Pa –(Presion Atm.)..
 StH T;		   // Crea en RAM la estructura T (temperatura exterior) ..

@@ -33,6 +33,10 @@ void test_SpStats_WD(void) {
 
 
 
-   TEST_ASSERT_FLOAT WITHIN(0.1, 0.43301, AUX.A_v_vx);
+   UnityAssertFloatsWithin((UNITY_FLOAT)((0.1)), (UNITY_FLOAT)((0.43301)), (UNITY_FLOAT)((AUX.A_v_vx)), (
+
+  ((void *)0)
+
+  ), (UNITY_UINT)(19));
 
 }
